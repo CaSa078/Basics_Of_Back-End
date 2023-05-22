@@ -1,3 +1,11 @@
-body{
-    background-color: blanchedalmond;
+body {
+    background-image: url(morning.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    width: 50%; /* Pas dit aan naar de gewenste breedte */
+    margin: 0 auto;
 }
