@@ -6,6 +6,6 @@ body {
 }
 
 .container {
-    width: 50%; /* Pas dit aan naar de gewenste breedte */
+    width: 50%;
     margin: 0 auto;
 }
