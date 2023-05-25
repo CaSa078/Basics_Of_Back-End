@@ -23,13 +23,13 @@ function greeting() {
     $eveningImage = 'evening.png';
     $nightImage = 'night.png';
 
-    if ($currentHour >= 6 && $currentHour < 12) {
+    if ($currentHour >= '06:00:00' && $currentHour < '12:00:00') {
         echo 'Goede morgen';
         $backgroundImage = $morningImage;
-    } elseif ($currentHour >= 12 && $currentHour < 18) {
+    } elseif ($currentHour >= '12:00:00' && $currentHour < '18:00:00') {
         echo 'Goede middag';
         $backgroundImage = $afternoonImage;
-    } elseif ($currentHour >= 18 && $currentHour < 24) {
+    } elseif ($currentHour >= '18:00:00' && $currentHour < '23:59:00') {
         echo 'Goede avond';
         $backgroundImage = $eveningImage;
     } else {
