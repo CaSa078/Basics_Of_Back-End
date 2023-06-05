@@ -45,24 +45,41 @@ echo $result;
 ?>
 
 <?php
-function lijst_sorteren($numbers) {
-    $sum = 0;
+function Worden_sorten($numbers) {
+    $to_sort = true;
+    while ($to_sort) {
+        $to_sort = false;
+        for ($x = 0; $x < count($numbers) - 1; $x++) {
+            if ($numbers[$x] > $numbers[$x + 1]) {
 
-    foreach ($numbers as $number) {
-        if ($number % 2 == 0)
-        $sum += $number;
-
+                $temp = $numbers[$x];
+                $numbers[$x] = $numbers[$x + 1];
+                $numbers[$x + 1] = $temp;
+                $to_sort = true;
+            }
+        }
     }
+    return $numbers;
+}
 
-    return $sum;
+$getallenLijst = [33, 2, 4, 11, 66, 0];
+$result = Worden_sorten($getallenLijst);
+echo implode(', ', $result);
+?>
+
+<?php
+function gcd($num1, $num2) {
+    while ($num2 != 0){
+        $t = $num1 % $num2;
+        $num1 = $num2;
+        $num2 = $t;
+      }
+      return $num1;
 
 }
 
- 
 
-$getallenLijst = [3, 1, 4, 2];
+$lijn = gcd(8,12);
 
-$result = lijst_sorteren($getallenLijst);
-
-echo $result;
+echo ($lijn);
 ?>
