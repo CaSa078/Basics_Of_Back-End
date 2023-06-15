@@ -17,7 +17,7 @@
 function greeting() {
     date_default_timezone_set('Europe/Amsterdam');
     $currentHour = date('H:i:s', time());
-
+    // $currentHour = "20:03:00";   test regel
     $morningImage = 'morning.png';
     $afternoonImage = 'afternoon.png';
     $eveningImage = 'evening.png';
@@ -29,7 +29,7 @@ function greeting() {
     } elseif ($currentHour >= '12:00:00' && $currentHour < '18:00:00') {
         echo 'Goede middag';
         $backgroundImage = $afternoonImage;
-    } elseif ($currentHour >= '18:00:00' && $currentHour < '23:59:00') {
+    } elseif ($currentHour >= '18:00:00' && $currentHour < '23:59:59') {
         echo 'Goede avond';
         $backgroundImage = $eveningImage;
     } else {
