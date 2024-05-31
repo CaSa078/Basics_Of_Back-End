@@ -1,0 +1,71 @@
+$main-color: #1DB954;
+$background-color: #121212;
+$text-color: white;
+$font-family: Arial, sans-serif;
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.page {
+    &__header {
+        background-color: $main-color;
+        padding: 10px 0;
+
+        .menu {
+            &__list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            &__item {
+                margin: 0 15px;
+            }
+
+            &__link {
+                text-decoration: none;
+                color: $text-color;
+                font-weight: bold;
+                transition: transform 0.3s ease-in-out;
+
+                &:hover {
+                    text-decoration: none;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: 20px;
+        text-align: center;
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__footer {
+        background-color: $main-color;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+
+        .footer {
+            &__text {
+                margin: 0;
+                color: $text-color;
+            }
+        }
+    }
+}
