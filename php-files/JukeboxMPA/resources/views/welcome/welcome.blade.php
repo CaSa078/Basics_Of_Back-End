@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    @extends('templates.master')
-</body>
-</html>
+@extends('layouts.master')
+@section('content')
+    <h1>welkom op mijn jukebox pagina</h1>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit excepturi quis nemo possimus porro delectus laborum recusandae repellendus voluptatum consectetur beatae ab natus similique mollitia repellat, id alias veritatis doloremque.</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore explicabo impedit ab architecto facere maxime ipsam adipisci autem in consequatur laboriosam magnam minima eaque illum, reprehenderit reiciendis provident magni aliquid?</p>
+@endsection

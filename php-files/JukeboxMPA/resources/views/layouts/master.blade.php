@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="css/style.css">
+    @stack('styles')
 </head>
 <body>
     <div class="page">
@@ -14,6 +15,7 @@
                     <li class="menu__item"><a class="menu__link" href="/home">Home</a></li>
                     <li class="menu__item"><a class="menu__link" href="/songs">Songs</a></li>
                     <li class="menu__item"><a class="menu__link" href="/genres">Genres</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/playlist">Playlist</a></li>
                 </ul>
             </nav>
         </div>
