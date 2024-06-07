@@ -16,7 +16,8 @@ class GenreController extends Controller
     }
 
     public function showgenres(){
-        return view("Jukebox.genres");
+        $genres = Genre::all();
+        return view("Jukebox.genres", ["genres" => $genres]);
     }
 
     /**

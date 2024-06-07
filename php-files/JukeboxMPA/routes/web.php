@@ -12,6 +12,6 @@ Route::get('/', function () {
 });
 
 Route::get("/home", [WelcomeController::class, "welcome"]);
-Route::get("/songs", [SongController::class, "showsongs"]);
-Route::get("/genres", [GenreController::class, "showgenres"]);
+Route::get("/songs/all", [SongController::class, "showsongs"]);
+Route::get("/genres/all", [GenreController::class, "showgenres"]);
 Route::get("/playlist", [PlaylistController::class, "index"]);

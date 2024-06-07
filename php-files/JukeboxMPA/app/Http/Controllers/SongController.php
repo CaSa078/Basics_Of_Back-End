@@ -16,6 +16,7 @@ class SongController extends Controller
     }
 
     public function showsongs(){
+        $songs = Song::all();
         return view("Jukebox.songs");
     }
 

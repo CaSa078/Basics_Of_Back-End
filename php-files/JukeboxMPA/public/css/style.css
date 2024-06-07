@@ -19,16 +19,16 @@ body {
 }
 .page__header .menu__item {
   margin: 0 15px;
+  transition: transform 0.3s ease-in-out;
+}
+.page__header .menu__item:hover {
+  text-decoration: none;
+  transform: scale(1.2);
 }
 .page__header .menu__link {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  transition: transform 0.3s ease-in-out;
-}
-.page__header .menu__link:hover {
-  text-decoration: none;
-  transform: scale(1.2);
 }
 .page__content {
   padding: 20px;
