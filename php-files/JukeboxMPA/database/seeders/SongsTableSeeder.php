@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Song;
 
 class SongsTableSeeder extends Seeder
 {
@@ -13,11 +14,15 @@ class SongsTableSeeder extends Seeder
     public function run(): void
     {
         Song::create([
-            'title' => 'Song Title 1',
+            'name' => 'Song Title 1',
+            'genre_id' => 1,
             'artist' => 'Artist 1',
-            'album' => 'Album 1',
-            'release_year' => 2020
+            'duration' => 180,
         ]);
+
+        Song::factory()->count(50)->create();
+
+        
         
     }
 }
