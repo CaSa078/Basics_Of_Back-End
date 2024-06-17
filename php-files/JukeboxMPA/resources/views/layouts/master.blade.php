@@ -13,8 +13,8 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item"><a class="menu__link" href="/home">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/songs">Songs</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/genres">Genres</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/songs/all">Songs</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/genres/all">Genres</a></li>
                     <li class="menu__item"><a class="menu__link" href="/playlist">Playlist</a></li>
                 </ul>
             </nav>

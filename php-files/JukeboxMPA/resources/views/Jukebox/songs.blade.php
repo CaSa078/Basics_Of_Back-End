@@ -6,7 +6,7 @@
     <h1>welkom op mijn jukebox pagina met songs</h1>
     <ul>
         @foreach($songs as $song)
-            <li>{{$song->title}}</li>
+            <li>{{$song->name}}</li>
         @endforeach
     </ul>
 @endsection

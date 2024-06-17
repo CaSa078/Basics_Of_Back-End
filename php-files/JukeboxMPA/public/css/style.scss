@@ -45,6 +45,12 @@ body {
     &__content {
         padding: 20px;
         text-align: center;
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 10px;
+        }
         li{
             list-style: none;
         }
