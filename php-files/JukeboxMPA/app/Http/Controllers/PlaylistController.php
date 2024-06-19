@@ -12,7 +12,7 @@ class PlaylistController extends Controller
      */
     public function index()
     {
-        return view("Jukebox.index");
+        return view("playlists.index");
     }
 
     /**
@@ -20,7 +20,7 @@ class PlaylistController extends Controller
      */
     public function create()
     {
-        //
+        return view("playlists.createplaylist");
     }
 
     /**
@@ -28,7 +28,11 @@ class PlaylistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Playlist::create([
+            "name" => $request->get("playlistName")
+        ]);
+
+        dd("Playlist created successfully");
     }
 
     /**

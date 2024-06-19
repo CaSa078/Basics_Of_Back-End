@@ -17,7 +17,7 @@ class GenreController extends Controller
 
     public function showgenres(){
         $genres = Genre::all();
-        return view("Jukebox.genres", ["genres" => $genres]);
+        return view("genres.genres", ["genres" => $genres]);
     }
 
     /**
@@ -25,7 +25,7 @@ class GenreController extends Controller
      */
     public function create()
     {
-        //
+        return view("genres.creategenre");
     }
 
     /**
@@ -33,7 +33,11 @@ class GenreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Genre::create([
+            "name" => $request->get("genreName")
+        ]);
+
+        dd("Genre created successfully");
     }
 
     /**
