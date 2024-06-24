@@ -3,9 +3,15 @@
     CreateGenre
 @endsection
 @section('content')
-    <form action="/genres/store" method="POST">
-        <label for="genreName">Vul hier u genre naam in:</label>
-        <input id="genreName" type="text" name="genreName">
-        @csrf
-        <input type="submit" value="Add Genre">
+    <div class="create-genre">
+        <form class="create-genre__form" action="/genres/store" method="POST">
+            @csrf
+            <label class="create-genre__label" for="genreName">Vul hier u genre naam in:</label>
+            <input class="create-genre__input" id="genreName" type="text" name="genreName">
+            @error('genreName')
+                <p style="color:red;">{{$message}}</p>
+            @enderror
+            <input class="create-genre__submit" type="submit" value="Add Genre">
+        </form>
+    </div>
 @endsection

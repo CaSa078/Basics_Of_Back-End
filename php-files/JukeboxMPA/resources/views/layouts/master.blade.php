@@ -14,9 +14,24 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item"><a class="menu__link" href="/home">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/songs/all">Songs</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/genres/all">Genres</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/playlist">Playlist</a></li>
+                    <li class="menu__item menu__item--dropdown">
+                        <a class="menu__link" href="/songs/all">Songs</a>
+                        <ul class="menu__dropdown">
+                            <li class="menu__dropdown-item"><a class="menu__dropdown-link" href="/songs/create">Create Song</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--dropdown">
+                        <a class="menu__link" href="/genres/all">Genres</a>
+                        <ul class="menu__dropdown">
+                            <li class="menu__dropdown-item"><a class="menu__dropdown-link" href="/genres/create">Create Genre</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--dropdown">
+                        <a class="menu__link" href="/playlist">Playlist</a>
+                        <ul class="menu__dropdown">
+                            <li class="menu__dropdown-item"><a class="menu__dropdown-link" href="/playlist/create">Create Playlist</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>

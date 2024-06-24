@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Playlist;
 use Illuminate\Http\Request;
+use App\Models\Song;
 
 class PlaylistController extends Controller
 {
@@ -20,7 +21,8 @@ class PlaylistController extends Controller
      */
     public function create()
     {
-        return view("playlists.createplaylist");
+        $songs = Song::all();
+        return view("playlists.createplaylist", ["songs" => $songs]);
     }
 
     /**
@@ -29,7 +31,9 @@ class PlaylistController extends Controller
     public function store(Request $request)
     {
         Playlist::create([
-            "name" => $request->get("playlistName")
+            "name" => $request->get("playlistName"),
+            
+            "song_id" => $request->get("playlistSong"),
         ]);
 
         dd("Playlist created successfully");
@@ -40,7 +44,7 @@ class PlaylistController extends Controller
      */
     public function show(Playlist $playlist)
     {
-        //
+        
     }
 
     /**

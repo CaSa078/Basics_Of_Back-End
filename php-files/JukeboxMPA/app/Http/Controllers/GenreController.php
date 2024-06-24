@@ -33,6 +33,11 @@ class GenreController extends Controller
      */
     public function store(Request $request)
     {
+        //validate
+        $request->validate([
+            "genreName" => "min:3|string|unique:genres,name|required"
+        ]);
+
         Genre::create([
             "name" => $request->get("genreName")
         ]);

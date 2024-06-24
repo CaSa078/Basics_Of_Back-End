@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Song;
 use App\Models\Genre;
+use App\Models\Playlist;
 use Illuminate\Http\Request;
 
 class SongController extends Controller
@@ -16,9 +17,10 @@ class SongController extends Controller
         //
     }
 
-    public function showsongs(){
+    public function showsongs()
+    {
         $songs = Song::all();
-        return view("songs.songs" , ["songs" => $songs]);
+        return view("songs.songs",["songs" => $songs]);
     }
 
     /**
@@ -27,7 +29,7 @@ class SongController extends Controller
     public function create()
     {
         $genres = Genre::all();
-        return view("songs.createsong" , ["genres" => $genres]);
+        return view("songs.createsong", ["genres" => $genres]);
     }
 
     /**
@@ -35,6 +37,14 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
+        //validate
+        $request->validate([
+            "songName" => "required",
+            "songArtist" => "required",
+            "songDuration" => "required|integer|min:1|max:1080",
+            "songGenre" => "required|exists:genres,id"
+        ]);
+
         Song::create([
             "name" => $request->get("songName"),
             "genre_id" => $request->get("songGenre"),
@@ -46,10 +56,11 @@ class SongController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Song $song)
-    {
-        //
-    }
+    // public function showsongs(Song $song)
+    // {
+    //     $songs = Song::all();
+    //     return view("songs.createplaylist", ["songs" => $songs]);
+    // }
 
     /**
      * Show the form for editing the specified resource.
