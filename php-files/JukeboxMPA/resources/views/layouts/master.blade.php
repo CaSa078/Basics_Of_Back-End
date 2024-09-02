@@ -27,7 +27,7 @@
                         </ul>
                     </li>
                     <li class="menu__item menu__item--dropdown">
-                        <a class="menu__link" href="/playlist">Playlist</a>
+                        <a class="menu__link" href="/playlist/all">Playlist</a>
                         <ul class="menu__dropdown">
                             <li class="menu__dropdown-item"><a class="menu__dropdown-link" href="/playlist/create">Create Playlist</a></li>
                         </ul>
